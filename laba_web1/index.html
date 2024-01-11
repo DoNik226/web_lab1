@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Лабораторная работа №1.">
+    <meta name="author" content="Доскал Никита Максимович">
+    <title>Лабораторная №1</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+<header class="bg">
+    <h1>Веб-программирование, Лаб. 1, Вариант 2508</h1>
+    <div id="credit">
+        <h3>Доскал Никита Максимович P3215</h3>
+    </div>
+</header>
+<table id="mainTable" class="shaded">
+    <tbody>
+    <tr><td colspan="5"><hr></td></tr>
+    <tr>
+        <td>Введите значение X:</td>
+        <td colspan="3"><input required name="X-input" type="text" placeholder="(-5 до 5)" maxlength="6"></td>
+        <td class="plot" colspan="6" rowspan="6">
+            <canvas id="canvas"></canvas>
+        </td>
+    </tr>
+    <tr>
+        <td>Введите значение Y:</td>
+        <td colspan="3"><input required name="Y-input" type="text" placeholder="(-3 до 5)" maxlength="6"></td>
+    </tr>
+    <tr>
+        <td colspan="3">Выберите R:</td>
+        <td>
+            <select name="check" id="Rad">
+                <option value="">Введите R</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select></td>
+    </tr>
+    <tr>
+        <td colspan="6" rowspan="8">
+            <br>
+            <br>
+            <button id="checkButton">Проверить на попадание в область</button>
+            <hr>
+        </td>
+    </tr>
+    </tbody>
+    <table id="tablebody">
+        <tr>
+            <th>X</th>
+            <th>Y</th>
+            <th>R</th>
+            <th>Точка входит в ОДЗ?</th>
+            <th>Текущее время</th>
+            <th>Время скрипта</th>
+        </tr>
+        <?php
+              session_start();
+              foreach ($_SESSION["tableRows"] as $tableRow) echo $tableRow;
+            ?>
+    </table>
+</table>
+<script type="text/javascript" src="scripts/validation.js"></script>
+<script type="text/javascript" src="scripts/graph.js"></script>
+</body>
+</html>

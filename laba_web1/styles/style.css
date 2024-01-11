@@ -1,0 +1,76 @@
+/* Селекторы классов */
+.bg {
+    background-color: lightblue;
+    padding: 20px;
+}
+
+.shaded {
+    background-color: #F9f9f9;
+}
+
+.plot {
+    vertical-align: top;
+}
+
+/* Селекторы идентификаторов */
+#credit {
+    margin-top: 20px;
+}
+
+#mainTable {
+    width: 100%;
+}
+
+/* Селекторы потомств */
+#mainTable td {
+    padding: 10px;
+}
+
+/* Селекторы псевдоклассов */
+input[type="text"]:required {
+    border-color: blue;
+}
+
+input[type="text"]::placeholder {
+    color: gray;
+}
+
+#checkButton:hover {
+    color: orange;
+    cursor: pointer;
+}
+
+/* Свойства стилей */
+header {
+    font-family: fantasy;
+    color: black;
+    font-size: 20px;
+}
+
+input {
+    padding: 5px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+/* Наследование и каскадирование */
+#mainTable td, #tablebody th {
+    font-size: 18px;
+    text-align: center;
+}
+
+#tablebody {
+    margin: 0 auto;
+    border: 1px solid black;
+}
+
+#tablebody th, #tablebody td {
+    border: 1px solid black;
+    text-align: center;
+    width: 100px;
+    background-color: lightblue;
+}
+
+
